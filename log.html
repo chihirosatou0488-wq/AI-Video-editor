@@ -1,86 +1,243 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>試行錯誤ログ | AI動画編集の試行錯誤記録</title>
-  <meta name="description" content="ChatGPT Work、Grok、Gensparkなど、AIツールごとの体験記をまとめた試行錯誤ログ。うまくいったこと、失敗したこと、気づきを記録。">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>試行錯誤ログ | AI動画編集の試行錯誤記録</title>
+    <meta name="description" content="ChatGPT Work、Grok、Gensparkなど、AIツールごとの体験記をまとめた試行錯誤ログ。うまくいったこと、失敗したこと、気づきを記録。">
+    <meta name="theme-color" content="#0A0A0A">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="試行錯誤ログ | AI動画編集の試行錯誤記録">
+    <meta property="og:description" content="ChatGPT Work、Grok、Gensparkなど、ツールごとの手応えを記録。">
+    <meta property="og:locale" content="ja_JP">
+    <link rel="canonical" href="https://chihirosatou0488-wq.github.io/AI-Video-editor/log.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='48' font-family='system-ui' font-weight='700' fill='%23fff'%3EAI%3C/text%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <a class="skip-link" href="#main">本文へスキップ</a>
+<body class="bg-slate-50 text-slate-900">
+    <a href="#main" class="skip-link">本文へスキップ</a>
 
-  <header class="site-header compact">
-    <div class="container header-inner">
-      <div>
-        <p class="site-kicker">Log</p>
-        <h1 class="page-title">試行錯誤ログ</h1>
-        <p class="page-subtitle">ツールごとの違いを、使った感覚で残す</p>
-      </div>
-      <nav class="site-nav" aria-label="メインメニュー">
-        <a href="index.html">トップ</a>
-        <a href="story.html">ストーリー</a>
-        <a href="log.html" aria-current="page">試行錯誤ログ</a>
-        <a href="insights.html">学び・まとめ</a>
-      </nav>
-    </div>
-  </header>
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50" aria-label="メインナビゲーション">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center h-16 gap-3">
+                <a href="index.html" class="flex items-center gap-x-3 min-w-0">
+                    <div class="w-9 h-9 bg-black rounded-xl flex items-center justify-center shrink-0" aria-hidden="true">
+                        <i class="fas fa-film text-white text-sm"></i>
+                    </div>
+                    <div class="min-w-0">
+                        <span class="font-semibold text-base sm:text-lg tracking-tight truncate block">AI動画編集の記録</span>
+                    </div>
+                </a>
 
-  <main id="main" class="container">
-    <section class="panel">
-      <p class="lead">
-        ここでは、実際に触ってみたAIツールの印象を、できるだけ短く、でも具体的に残しています。
-        それぞれに良さがある一方で、向き不向きもはっきり見えてきました。
-      </p>
-    </section>
+                <div class="hidden lg:flex items-center gap-x-1 text-sm">
+                    <a href="index.html" class="px-3 py-2 text-slate-600 hover:text-slate-900 transition-colors rounded-lg">トップ</a>
+                    <a href="story.html" class="px-3 py-2 text-slate-600 hover:text-slate-900 transition-colors rounded-lg">ストーリー</a>
+                    <a href="log.html" class="px-3 py-2 text-slate-900 font-medium bg-slate-100 rounded-lg" aria-current="page">試行錯誤ログ</a>
+                    <a href="insights.html" class="px-3 py-2 text-slate-600 hover:text-slate-900 transition-colors rounded-lg">学び・まとめ</a>
+                </div>
 
-    <section class="log-grid">
-      <article class="log-card">
-        <h2>ChatGPT Work</h2>
-        <h3>うまくいったこと</h3>
-        <p>文章の整理、構成づくり、言い回しの調整はかなりやりやすかったです。頭の中にある曖昧なイメージを、少しずつ言葉にする作業と相性がよいと感じました。</p>
-        <h3>失敗したこと</h3>
-        <p>最初から完璧な答えを求めると、逆にやり取りが増えて疲れました。指示を細かくしすぎると、考える時間までAIに渡してしまう感じもありました。</p>
-        <h3>気づき</h3>
-        <p>ChatGPT Workは、完成品を出す道具というより、考えを整えるための相棒として使うと力を発揮しやすいです。</p>
-      </article>
+                <button id="menu-btn" type="button"
+                        class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-50 transition-colors shrink-0"
+                        aria-expanded="false" aria-controls="mobile-menu" aria-label="メニューを開く">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-100 pb-3">
+                <div class="flex flex-col text-sm py-2">
+                    <a href="index.html" class="px-3 py-3 text-slate-700 hover:bg-slate-50 rounded-xl">トップ</a>
+                    <a href="story.html" class="px-3 py-3 text-slate-700 hover:bg-slate-50 rounded-xl">ストーリー</a>
+                    <a href="log.html" class="px-3 py-3 text-slate-900 font-medium bg-slate-50 rounded-xl" aria-current="page">試行錯誤ログ</a>
+                    <a href="insights.html" class="px-3 py-3 text-slate-700 hover:bg-slate-50 rounded-xl">学び・まとめ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-      <article class="log-card">
-        <h2>Grok</h2>
-        <h3>うまくいったこと</h3>
-        <p>勢いのある試し方や、ざっくり方向を決める段階では頼もしさがありました。思い切って進めたい時には、背中を押してくれる感覚があります。</p>
-        <h3>失敗したこと</h3>
-        <p>細かい部分を詰める作業では、こちらの意図を何度か補足する必要がありました。勢いで進めたあとに、結局手直しが必要になることもありました。</p>
-        <h3>気づき</h3>
-        <p>Grokは、スピード感がほしい場面に向いています。ただし、仕上げは人間が見る前提で使うほうが安心だと感じました。</p>
-      </article>
+    <main id="main">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 pb-8 text-center">
+            <p class="text-xs font-semibold tracking-widest uppercase text-emerald-600 mb-3">Log</p>
+            <h1 class="section-header tracking-tighter mb-3 break-words">試行錯誤ログ</h1>
+            <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto break-words">
+                ツールごとの違いを、使った感覚で残す
+            </p>
+        </div>
 
-      <article class="log-card">
-        <h2>Genspark</h2>
-        <h3>うまくいったこと</h3>
-        <p>アイデアの試作や、少し遊びのある発想を試すときに面白さがありました。ひとまず形にしてみる、という使い方に向いています。</p>
-        <h3>失敗したこと</h3>
-        <p>何を作りたいのかを曖昧にしたままだと、便利さよりも迷いのほうが強くなりました。出力を見てから、また方向を考え直す場面も多かったです。</p>
-        <h3>気づき</h3>
-        <p>Gensparkは、発想を広げる実験台として見ると楽しいです。完成までの近道というより、試して比べるための場所だと思うと使いやすいです。</p>
-      </article>
-    </section>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 pb-8">
+            <section class="bg-white border border-slate-200 rounded-3xl p-5 sm:p-7 shadow-sm overflow-hidden">
+                <p class="text-sm sm:text-base text-slate-600 leading-relaxed break-words">
+                    ここでは、実際に触ってみたAIツールの印象を、できるだけ短く、でも具体的に残しています。それぞれに良さがある一方で、向き不向きもはっきり見えてきました。
+                </p>
+            </section>
+        </div>
 
-    <section class="panel">
-      <h2>共通して感じたこと</h2>
-      <ul class="clean-list">
-        <li>AIは、放っておくと勝手に整うわけではない</li>
-        <li>最初の整理ができるほど、結果も安定しやすい</li>
-        <li>ツールごとに得意な場面が違う</li>
-        <li>人間の確認が入ると、ようやく安心して使える</li>
-      </ul>
-    </section>
-  </main>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 pb-12">
+            <div class="grid md:grid-cols-3 gap-5">
+                <!-- ChatGPT Work -->
+                <article class="comparison-card bg-white border border-slate-200 rounded-3xl p-6 overflow-hidden min-w-0 flex flex-col">
+                    <div class="flex items-center justify-between gap-3 mb-5 min-w-0">
+                        <h2 class="text-lg font-semibold tracking-tight break-words min-w-0">ChatGPT Work</h2>
+                        <span class="shrink-0 text-[10px] px-2.5 py-1 rounded-full bg-slate-900 text-white font-semibold tracking-wide">TOOL</span>
+                    </div>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>記録が増えるほど、自分に合う使い方も見えやすくなります。</p>
-    </div>
-  </footer>
+                    <div class="space-y-5 text-sm flex-1">
+                        <div class="min-w-0">
+                            <h3 class="font-medium text-emerald-700 mb-1.5 flex items-center gap-x-2">
+                                <i class="fas fa-circle-check text-xs shrink-0" aria-hidden="true"></i>
+                                <span>うまくいったこと</span>
+                            </h3>
+                            <p class="text-slate-600 leading-relaxed break-words">
+                                文章の整理、構成づくり、言い回しの調整はかなりやりやすかったです。頭の中にある曖昧なイメージを、少しずつ言葉にする作業と相性がよいと感じました。
+                            </p>
+                        </div>
+                        <div class="min-w-0">
+                            <h3 class="font-medium text-rose-600 mb-1.5 flex items-center gap-x-2">
+                                <i class="fas fa-circle-xmark text-xs shrink-0" aria-hidden="true"></i>
+                                <span>失敗したこと</span>
+                            </h3>
+                            <p class="text-slate-600 leading-relaxed break-words">
+                                最初から完璧な答えを求めると、逆にやり取りが増えて疲れました。指示を細かくしすぎると、考える時間までAIに渡してしまう感じもありました。
+                            </p>
+                        </div>
+                        <div class="min-w-0 pt-4 border-t border-slate-100">
+                            <h3 class="font-medium text-slate-800 mb-1.5 flex items-center gap-x-2">
+                                <i class="fas fa-lightbulb text-xs text-amber-500 shrink-0" aria-hidden="true"></i>
+                                <span>気づき</span>
+                            </h3>
+                            <p class="text-slate-600 leading-relaxed break-words">
+                                ChatGPT Workは、完成品を出す道具というより、考えを整えるための相棒として使うと力を発揮しやすいです。
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Grok -->
+                <article class="comparison-card bg-white border-2 border-slate-900 rounded-3xl p-6 overflow-hidden min-w-0 flex flex-col relative">
+                    <div class="absolute top-5 right-5">
+                        <span class="bg-slate-900 text-white text-[10px] px-2.5 py-1 rounded-full font-semibold tracking-wider">TRIED</span>
+                    </div>
+                    <div class="flex items-center gap-3 mb-5 min-w-0 pr-16">
+                        <h2 class="text-lg font-semibold tracking-tight break-words min-w-0">Grok</h2>
+                    </div>
+
+                    <div class="space-y-5 text-sm flex-1">
+                        <div class="min-w-0">
+                            <h3 class="font-medium text-emerald-700 mb-1.5 flex items-center gap-x-2">
+                                <i class="fas fa-circle-check text-xs shrink-0" aria-hidden="true"></i>
+                                <span>うまくいったこと</span>
+                            </h3>
+                            <p class="text-slate-600 leading-relaxed break-words">
+                                勢いのある試し方や、ざっくり方向を決める段階では頼もしさがありました。思い切って進めたい時には、背中を押してくれる感覚があります。
+                            </p>
+                        </div>
+                        <div class="min-w-0">
+                            <h3 class="font-medium text-rose-600 mb-1.5 flex items-center gap-x-2">
+                                <i class="fas fa-circle-xmark text-xs shrink-0" aria-hidden="true"></i>
+                                <span>失敗したこと</span>
+                            </h3>
+                            <p class="text-slate-600 leading-relaxed break-words">
+                                細かい部分を詰める作業では、こちらの意図を何度か補足する必要がありました。勢いで進めたあとに、結局手直しが必要になることもありました。
+                            </p>
+                        </div>
+                        <div class="min-w-0 pt-4 border-t border-slate-100">
+                            <h3 class="font-medium text-slate-800 mb-1.5 flex items-center gap-x-2">
+                                <i class="fas fa-lightbulb text-xs text-amber-500 shrink-0" aria-hidden="true"></i>
+                                <span>気づき</span>
+                            </h3>
+                            <p class="text-slate-600 leading-relaxed break-words">
+                                Grokは、スピード感がほしい場面に向いています。ただし、仕上げは人間が見る前提で使うほうが安心だと感じました。
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Genspark -->
+                <article class="comparison-card bg-white border border-slate-200 rounded-3xl p-6 overflow-hidden min-w-0 flex flex-col">
+                    <div class="flex items-center justify-between gap-3 mb-5 min-w-0">
+                        <h2 class="text-lg font-semibold tracking-tight break-words min-w-0">Genspark</h2>
+                        <span class="shrink-0 text-[10px] px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 font-semibold tracking-wide">TOOL</span>
+                    </div>
+
+                    <div class="space-y-5 text-sm flex-1">
+                        <div class="min-w-0">
+                            <h3 class="font-medium text-emerald-700 mb-1.5 flex items-center gap-x-2">
+                                <i class="fas fa-circle-check text-xs shrink-0" aria-hidden="true"></i>
+                                <span>うまくいったこと</span>
+                            </h3>
+                            <p class="text-slate-600 leading-relaxed break-words">
+                                アイデアの試作や、少し遊びのある発想を試すときに面白さがありました。ひとまず形にしてみる、という使い方に向いています。
+                            </p>
+                        </div>
+                        <div class="min-w-0">
+                            <h3 class="font-medium text-rose-600 mb-1.5 flex items-center gap-x-2">
+                                <i class="fas fa-circle-xmark text-xs shrink-0" aria-hidden="true"></i>
+                                <span>失敗したこと</span>
+                            </h3>
+                            <p class="text-slate-600 leading-relaxed break-words">
+                                何を作りたいのかを曖昧にしたままだと、便利さよりも迷いのほうが強くなりました。出力を見てから、また方向を考え直す場面も多かったです。
+                            </p>
+                        </div>
+                        <div class="min-w-0 pt-4 border-t border-slate-100">
+                            <h3 class="font-medium text-slate-800 mb-1.5 flex items-center gap-x-2">
+                                <i class="fas fa-lightbulb text-xs text-amber-500 shrink-0" aria-hidden="true"></i>
+                                <span>気づき</span>
+                            </h3>
+                            <p class="text-slate-600 leading-relaxed break-words">
+                                Gensparkは、発想を広げる実験台として見ると楽しいです。完成までの近道というより、試して比べるための場所だと思うと使いやすいです。
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- Common takeaways -->
+        <div class="bg-white border-t border-b border-slate-200 py-12 sm:py-14">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6">
+                <h2 class="text-xl sm:text-2xl font-semibold tracking-tight mb-6 break-words">共通して感じたこと</h2>
+                <ul class="grid sm:grid-cols-2 gap-4 text-sm">
+                    <li class="flex gap-x-3 min-w-0 bg-slate-50 border border-slate-200 rounded-2xl p-4">
+                        <i class="fas fa-check text-emerald-500 mt-0.5 shrink-0" aria-hidden="true"></i>
+                        <span class="text-slate-700 break-words">AIは、放っておくと勝手に整うわけではない</span>
+                    </li>
+                    <li class="flex gap-x-3 min-w-0 bg-slate-50 border border-slate-200 rounded-2xl p-4">
+                        <i class="fas fa-check text-emerald-500 mt-0.5 shrink-0" aria-hidden="true"></i>
+                        <span class="text-slate-700 break-words">最初の整理ができるほど、結果も安定しやすい</span>
+                    </li>
+                    <li class="flex gap-x-3 min-w-0 bg-slate-50 border border-slate-200 rounded-2xl p-4">
+                        <i class="fas fa-check text-emerald-500 mt-0.5 shrink-0" aria-hidden="true"></i>
+                        <span class="text-slate-700 break-words">ツールごとに得意な場面が違う</span>
+                    </li>
+                    <li class="flex gap-x-3 min-w-0 bg-slate-50 border border-slate-200 rounded-2xl p-4">
+                        <i class="fas fa-check text-emerald-500 mt-0.5 shrink-0" aria-hidden="true"></i>
+                        <span class="text-slate-700 break-words">人間の確認が入ると、ようやく安心して使える</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row gap-3 justify-between">
+            <a href="story.html" class="inline-flex items-center justify-center px-5 py-3 border border-slate-300 hover:bg-white rounded-2xl text-sm font-medium transition-all">
+                <i class="fas fa-arrow-left mr-2 text-xs" aria-hidden="true"></i> ストーリーへ
+            </a>
+            <a href="insights.html" class="inline-flex items-center justify-center px-5 py-3 bg-black text-white hover:bg-slate-800 rounded-2xl text-sm font-medium transition-all">
+                学び・まとめへ <i class="fas fa-arrow-right ml-2 text-xs" aria-hidden="true"></i>
+            </a>
+        </div>
+    </main>
+
+    <footer class="border-t border-slate-200 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-8 text-center">
+            <p class="text-slate-500 text-sm leading-relaxed break-words">
+                記録が増えるほど、自分に合う使い方も見えやすくなります。
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

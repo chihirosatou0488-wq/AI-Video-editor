@@ -1,100 +1,172 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ストーリー | AI動画編集の試行錯誤記録</title>
-  <meta name="description" content="AIに期待していた頃、実際にやってみて苦労したこと、うまくいかなかった体験、それでも続けている理由をまとめたストーリーページ。">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ストーリー | AI動画編集の試行錯誤記録</title>
+    <meta name="description" content="AIに期待していた頃、実際にやってみて苦労したこと、うまくいかなかった体験、それでも続けている理由をまとめたストーリーページ。">
+    <meta name="theme-color" content="#0A0A0A">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ストーリー | AI動画編集の試行錯誤記録">
+    <meta property="og:description" content="AIに期待していた頃から、苦労しても続けている理由までをひとつの流れで。">
+    <meta property="og:locale" content="ja_JP">
+    <link rel="canonical" href="https://chihirosatou0488-wq.github.io/AI-Video-editor/story.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='48' font-family='system-ui' font-weight='700' fill='%23fff'%3EAI%3C/text%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <a class="skip-link" href="#main">本文へスキップ</a>
+<body class="bg-slate-50 text-slate-900">
+    <a href="#main" class="skip-link">本文へスキップ</a>
 
-  <header class="site-header compact">
-    <div class="container header-inner">
-      <div>
-        <p class="site-kicker">Story</p>
-        <h1 class="page-title">ストーリー</h1>
-        <p class="page-subtitle">期待からつまずきまでを、そのまま書く</p>
-      </div>
-      <nav class="site-nav" aria-label="メインメニュー">
-        <a href="index.html">トップ</a>
-        <a href="story.html" aria-current="page">ストーリー</a>
-        <a href="log.html">試行錯誤ログ</a>
-        <a href="insights.html">学び・まとめ</a>
-      </nav>
-    </div>
-  </header>
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50" aria-label="メインナビゲーション">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center h-16 gap-3">
+                <a href="index.html" class="flex items-center gap-x-3 min-w-0">
+                    <div class="w-9 h-9 bg-black rounded-xl flex items-center justify-center shrink-0" aria-hidden="true">
+                        <i class="fas fa-film text-white text-sm"></i>
+                    </div>
+                    <div class="min-w-0">
+                        <span class="font-semibold text-base sm:text-lg tracking-tight truncate block">AI動画編集の記録</span>
+                    </div>
+                </a>
 
-  <main id="main" class="container prose">
-    <article class="paper">
-      <section>
-        <h2>AIに期待していた頃</h2>
-        <p>
-          最初は、AI動画編集を使えば、動画づくりが一気に楽になると思っていました。
-          文字を入れる、素材を並べる、音を合わせる。そのあたりをAIがうまくやってくれたら、
-          自分はアイデアを出すだけで済むのではないか、と考えていたのです。
-        </p>
-        <p>
-          でも、実際に触ってみると、思っていたほど単純ではありませんでした。
-          便利なはずのAIでも、こちらが何を作りたいのかをはっきり伝えないと、いい結果にはつながりにくい。
-          そのことに、まず気づかされました。
-        </p>
-      </section>
+                <div class="hidden lg:flex items-center gap-x-1 text-sm">
+                    <a href="index.html" class="px-3 py-2 text-slate-600 hover:text-slate-900 transition-colors rounded-lg">トップ</a>
+                    <a href="story.html" class="px-3 py-2 text-slate-900 font-medium bg-slate-100 rounded-lg" aria-current="page">ストーリー</a>
+                    <a href="log.html" class="px-3 py-2 text-slate-600 hover:text-slate-900 transition-colors rounded-lg">試行錯誤ログ</a>
+                    <a href="insights.html" class="px-3 py-2 text-slate-600 hover:text-slate-900 transition-colors rounded-lg">学び・まとめ</a>
+                </div>
 
-      <section>
-        <h2>実際にやってみて苦労したこと</h2>
-        <p>
-          いちばん大変だったのは、AIに任せたあとに出てくる「直し」の多さでした。
-          思った色にならない、テンポが少し違う、字幕の見え方が弱い。
-          ひとつ直すと、別の場所が気になる。そんなことの繰り返しでした。
-        </p>
-        <p>
-          しかも、AIが出したものをそのまま使えない場面も多くあります。
-          結局は、細かい調整を人間が見て、最後を整える必要があります。
-          ここで「全部自動ではないんだ」と、かなり現実を知りました。
-        </p>
-      </section>
+                <button id="menu-btn" type="button"
+                        class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-50 transition-colors shrink-0"
+                        aria-expanded="false" aria-controls="mobile-menu" aria-label="メニューを開く">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-100 pb-3">
+                <div class="flex flex-col text-sm py-2">
+                    <a href="index.html" class="px-3 py-3 text-slate-700 hover:bg-slate-50 rounded-xl">トップ</a>
+                    <a href="story.html" class="px-3 py-3 text-slate-900 font-medium bg-slate-50 rounded-xl" aria-current="page">ストーリー</a>
+                    <a href="log.html" class="px-3 py-3 text-slate-700 hover:bg-slate-50 rounded-xl">試行錯誤ログ</a>
+                    <a href="insights.html" class="px-3 py-3 text-slate-700 hover:bg-slate-50 rounded-xl">学び・まとめ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-      <section>
-        <h2>うまくいかなかった体験</h2>
-        <p>
-          うまくいかなかった代表的な場面は、作業の順番を決めずに始めてしまったことです。
-          先に素材を集めてから考えるのではなく、考えながら集め、集めながらまた考える。
-          そのやり方だと、どこまで進んでいるのか分からなくなり、気持ちまで疲れてしまいました。
-        </p>
-        <p>
-          たぶんAIそのものが悪いのではなく、使い方の設計が甘かったのだと思います。
-          便利そうに見えるものほど、最初に少しだけ整理が必要だと、身をもって感じました。
-        </p>
-      </section>
+    <main id="main">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 pb-8 text-center">
+            <p class="text-xs font-semibold tracking-widest uppercase text-emerald-600 mb-3">Story</p>
+            <h1 class="section-header tracking-tighter mb-3 break-words">ストーリー</h1>
+            <p class="text-slate-600 text-base sm:text-lg leading-relaxed break-words">
+                期待からつまずきまでを、そのまま書く
+            </p>
+        </div>
 
-      <section>
-        <h2>それでも続けている理由</h2>
-        <p>
-          それでも続けているのは、少しずつでも前に進む実感があるからです。
-          一発で完成しなくても、下書きが早く作れたり、考えを言葉にしやすくなったりするだけで、
-          作業の重さはかなり変わります。
-        </p>
-        <p>
-          AIは、楽をさせてくれる魔法ではありません。
-          でも、考える入口を広げたり、やり直しの回数を減らしたりする力はあります。
-          だから、完全に頼り切るのではなく、少しずつ一緒に使っていく。
-          そのほうが、自分には合っていると感じています。
-        </p>
-      </section>
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 pb-16">
+            <article class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm overflow-hidden space-y-10">
+                <section class="min-w-0">
+                    <div class="flex items-start gap-x-3 mb-4">
+                        <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 shrink-0 mt-0.5">
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                        </span>
+                        <h2 class="text-lg sm:text-xl font-semibold tracking-tight break-words pt-1">AIに期待していた頃</h2>
+                    </div>
+                    <div class="space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed pl-0 sm:pl-12">
+                        <p class="break-words">
+                            最初は、AI動画編集を使えば、動画づくりが一気に楽になると思っていました。文字を入れる、素材を並べる、音を合わせる。そのあたりをAIがうまくやってくれたら、自分はアイデアを出すだけで済むのではないか、と考えていたのです。
+                        </p>
+                        <p class="break-words">
+                            でも、実際に触ってみると、思っていたほど単純ではありませんでした。便利なはずのAIでも、こちらが何を作りたいのかをはっきり伝えないと、いい結果にはつながりにくい。そのことに、まず気づかされました。
+                        </p>
+                    </div>
+                </section>
 
-      <aside class="note-box">
-        <h3>このページのひとこと</h3>
-        <p>「楽になるはずだったのに大変だった」という感覚は、失敗ではなく、使い方を学んでいる途中のサインだと思っています。</p>
-      </aside>
-    </article>
-  </main>
+                <section class="min-w-0 border-t border-slate-100 pt-10">
+                    <div class="flex items-start gap-x-3 mb-4">
+                        <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-amber-50 text-amber-600 shrink-0 mt-0.5">
+                            <i class="fas fa-wrench" aria-hidden="true"></i>
+                        </span>
+                        <h2 class="text-lg sm:text-xl font-semibold tracking-tight break-words pt-1">実際にやってみて苦労したこと</h2>
+                    </div>
+                    <div class="space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed pl-0 sm:pl-12">
+                        <p class="break-words">
+                            いちばん大変だったのは、AIに任せたあとに出てくる「直し」の多さでした。思った色にならない、テンポが少し違う、字幕の見え方が弱い。ひとつ直すと、別の場所が気になる。そんなことの繰り返しでした。
+                        </p>
+                        <p class="break-words">
+                            しかも、AIが出したものをそのまま使えない場面も多くあります。結局は、細かい調整を人間が見て、最後を整える必要があります。ここで「全部自動ではないんだ」と、かなり現実を知りました。
+                        </p>
+                    </div>
+                </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>うまくいった日も、詰まった日も、どちらも記録に残していきます。</p>
-    </div>
-  </footer>
+                <section class="min-w-0 border-t border-slate-100 pt-10">
+                    <div class="flex items-start gap-x-3 mb-4">
+                        <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-rose-50 text-rose-500 shrink-0 mt-0.5">
+                            <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                        </span>
+                        <h2 class="text-lg sm:text-xl font-semibold tracking-tight break-words pt-1">うまくいかなかった体験</h2>
+                    </div>
+                    <div class="space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed pl-0 sm:pl-12">
+                        <p class="break-words">
+                            うまくいかなかった代表的な場面は、作業の順番を決めずに始めてしまったことです。先に素材を集めてから考えるのではなく、考えながら集め、集めながらまた考える。そのやり方だと、どこまで進んでいるのか分からなくなり、気持ちまで疲れてしまいました。
+                        </p>
+                        <p class="break-words">
+                            たぶんAIそのものが悪いのではなく、使い方の設計が甘かったのだと思います。便利そうに見えるものほど、最初に少しだけ整理が必要だと、身をもって感じました。
+                        </p>
+                    </div>
+                </section>
+
+                <section class="min-w-0 border-t border-slate-100 pt-10">
+                    <div class="flex items-start gap-x-3 mb-4">
+                        <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-sky-50 text-sky-600 shrink-0 mt-0.5">
+                            <i class="fas fa-heart" aria-hidden="true"></i>
+                        </span>
+                        <h2 class="text-lg sm:text-xl font-semibold tracking-tight break-words pt-1">それでも続けている理由</h2>
+                    </div>
+                    <div class="space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed pl-0 sm:pl-12">
+                        <p class="break-words">
+                            それでも続けているのは、少しずつでも前に進む実感があるからです。一発で完成しなくても、下書きが早く作れたり、考えを言葉にしやすくなったりするだけで、作業の重さはかなり変わります。
+                        </p>
+                        <p class="break-words">
+                            AIは、楽をさせてくれる魔法ではありません。でも、考える入口を広げたり、やり直しの回数を減らしたりする力はあります。だから、完全に頼り切るのではなく、少しずつ一緒に使っていく。そのほうが、自分には合っていると感じています。
+                        </p>
+                    </div>
+                </section>
+
+                <aside class="mt-2 p-5 sm:p-6 bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden">
+                    <div class="font-medium mb-2 flex items-center gap-x-2 text-sm sm:text-base">
+                        <i class="fas fa-info-circle text-slate-400 shrink-0" aria-hidden="true"></i>
+                        <span class="break-words">このページのひとこと</span>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed break-words">
+                        「楽になるはずだったのに大変だった」という感覚は、失敗ではなく、使い方を学んでいる途中のサインだと思っています。
+                    </p>
+                </aside>
+            </article>
+
+            <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-between">
+                <a href="index.html" class="inline-flex items-center justify-center px-5 py-3 border border-slate-300 hover:bg-white rounded-2xl text-sm font-medium transition-all">
+                    <i class="fas fa-arrow-left mr-2 text-xs" aria-hidden="true"></i> トップへ
+                </a>
+                <a href="log.html" class="inline-flex items-center justify-center px-5 py-3 bg-black text-white hover:bg-slate-800 rounded-2xl text-sm font-medium transition-all">
+                    試行錯誤ログへ <i class="fas fa-arrow-right ml-2 text-xs" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-slate-200 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-8 text-center">
+            <p class="text-slate-500 text-sm leading-relaxed break-words">
+                うまくいった日も、詰まった日も、どちらも記録に残していきます。
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
